@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Estilos-->
+    <link rel="stylesheet" type="text/css" href="exemplo04.css">
+</head>
+
+<body>
+    <h1>Formulario de rexistro de usuario con validación</h1>
+    <form action="" method="post">
+        <!--Nome completo-->
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" name="nome" id="nome" placeholder="Ex: Ana López" required aria-label="nome completo"><br>
+
+        <!--Email-->
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" placeholder="Ex: ana@gmail.com" required aria-label="email"><br>
+
+        <!--Contrasinal-->
+        <label for="contrasinal">Contrasinal:</label><br>
+        <input type="password" name="contrasinal" id="contrasinal" title="Minimo 6 caracteres" required
+            aria-label="contrasinal de minimo 6 caracteres" pattern=".{6,}"><br>
+
+        <!--Data de nacemento-->
+        <label for="datanac">Data de nacemento:</label><br>
+        <input type="date" name="datanac" id="datanac" required aria-label="data nac"><br>
+
+        <!--Xénero-->
+        <fieldset>
+            <legend>Xénero</legend>
+            <input type="radio" name="xenero" id="femenino" required checked>
+            <label for="femenino">Femenino</label><br>
+            <input type="radio" name="xenero" id="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" name="xenero" id="outros">
+            <label for="outros">Outros</label><br>
+        </fieldset>
+
+        <!--Preferencias:-->
+        <fieldset>
+        <legend>Preferencias:</legend>
+        <input type="checkbox" name="preferencia" id="novas">
+        <label for="novas">Recibir novas por correo</label><br>
+        <input type="checkbox" name="preferencia" id="ofertas">
+        <label for="ofertas">Recibir ofertas personalizadas</label><br><br>
+        </fieldset>
+
+        <!--Pais-->
+        <label for="pais">País:</label>
+        <select name="pais" id="pais" required>
+            <option value="">Selecciona unha opción:</option>
+            <option value="es">España</option>
+            <option value="pt">Portugal</option>
+            <option value="br">Brasil</option>
+        </select><br><br>
+
+        <!--Botón de rexistro-->
+        <input type="submit" value="Rexistrarse">
+    </form>
+
+</body>
+
+</html>

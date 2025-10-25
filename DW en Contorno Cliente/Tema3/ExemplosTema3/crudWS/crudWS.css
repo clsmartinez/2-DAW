@@ -1,0 +1,132 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI";
+    background: #f6f7fb;
+    color: #1f2937;
+    line-height: 1.5;
+
+    /* Centrado total do contido */
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* Contedor principal (semántico) */
+.contido {
+    width: 100%;
+    padding: 12px;
+}
+
+/* Tarxeta do formulario */
+.panel {
+    margin: auto;
+    max-width: 560px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .3);
+}
+
+.panel h1 {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+}
+
+/* Formulario en grella sinxela (layout) */
+.grella {
+    display: grid;
+    /* Layout en grella */
+    grid-template-columns: 1fr;
+    /* Unha columna sinxela */
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+/* Campos de formulario */
+label {
+    color: #6b7280;
+    font-size: .95rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+/* Botóns de acción — 4 columnas iguais e distribución uniforme */
+.botons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* 4 botóns, mesma largura */
+    gap: 10px;
+    /* separación uniforme */
+    margin-top: 4px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    background: #2563eb;
+    /* Primario */
+    color: #fff;
+    width: 100%;
+    /* ocupa toda a cela da grella */
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.sec {
+    background: #fff;
+    color: #1f2937;
+    border-color: #e5e7eb;
+}
+
+button.sec:hover {
+    border-color: #1f2937;
+}
+
+button.perigo {
+    background: #dc2626;
+}
+
+button.perigo:hover {
+    background: #b91c1c;
+}
+
+/* Zona de mensaxes */
+.mensaxes {
+    min-height: 1.2em;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: .95rem;
+}
+
+/* Axuda visual para required */
+input[required] {
+    background-image: linear-gradient(to right, transparent, transparent 98%, #fde68a 98%, #fde68a 100%);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}

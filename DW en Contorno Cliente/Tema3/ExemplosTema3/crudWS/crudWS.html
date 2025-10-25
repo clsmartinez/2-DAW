@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD de Videoxogos</title>
+    <link rel="stylesheet" href="crudWS.css" type="text/css">
+</head>
+
+<body>
+    <main class="contido">
+        <form id="formXogo" class="panel" autocomplete="off">
+            <h1>CRUD de Videoxogos</h1>
+
+            <div class="grella">
+                <label for="clave">Clave</label>
+                <input id="clave" name="clave" type="number" min="1" step="1" required>
+
+                <label for="titulo">Título</label>
+                <input id="titulo" name="titulo" type="text" required>
+
+                <label for="compania">Compañía</label>
+                <input id="compania" name="compania" type="text" required>
+
+                <label for="ano">Ano</label>
+                <input id="ano" name="ano" type="number" min="1970" max="2100" required>
+
+                <label for="xenero">Xénero</label>
+                <input id="xenero" name="xenero" type="text" required>
+
+                <label for="plataforma">Plataforma</label>
+                <input id="plataforma" name="plataforma" type="text" required>
+            </div>
+
+            <div class="botons">
+                <button type="button" id="btnCrear">Crear</button>
+                <button type="button" id="btnModificar" class="sec">Modificar</button>
+                <button type="button" id="btnBuscar" class="sec">Buscar por clave</button>
+                <button type="button" id="btnEliminar" class="perigo">Eliminar</button>
+            </div>
+
+            <div id="mensaxes" class="mensaxes" aria-live="polite"></div>
+        </form>
+    </main>
+    <script src="crudWS v2.js"></script>
+</body>
+
+</html>

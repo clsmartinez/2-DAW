@@ -1,0 +1,64 @@
+<html lang="gl">
+
+<head>
+    <title>Exemplos EMMET</title>
+</head>
+
+<body>
+    <!-- Crear un elemento único: p -->
+    <p></p>
+    <!-- Crear un elemento con identificador: span#texto -->
+    <span id="texto"></span>
+    <!-- Crear un elemento cunha clase: div.caixa -->
+    <div class="caixa"></div>
+    <!-- Crear un elemento con múltiples clases: p.texto.paragrafo -->
+    <p class="texto paragrafo"></p>
+    <!-- Crear un elemento con identificadores e clases: a#enlace.internet -->
+    <a href="" id="enlace" class="internet"></a>
+    <!-- Crear un div con identificador ou clase: .caixa -->
+    <div class="caixa"></div>
+    <!-- Crear un elemento que conteña texto: p{Ola mundo!} -->
+    <p>Ola mundo!</p>
+    <!-- Crear un elemento cun atributo HTML que non teña valor: span[contido] -->
+    <span contido=""></span>
+    <!-- Crear un elemento cun atributo HTML que conteña valor: span[contido="valor do atributo"] -->
+    <span contido="valor do atributo"></span>
+    <!-- Crear múltiples elementos: b*3 -->
+    <b></b>
+    <b></b>
+    <b></b>
+    <!-- Crear múltiples elementos usando un iterador: img[src="foto$.jpg"]*5 -->
+    <img src="foto1.jpg" alt="">
+    <img src="foto2.jpg" alt="">
+    <img src="foto3.jpg" alt="">
+    <img src="foto4.jpg" alt="">
+    <img src="foto5.jpg" alt="">
+    <!-- Crear elementos aniñados: div>span>a -->
+    <div>
+        <span>
+            <a href=""></a>
+        </span>
+    </div>
+    <!-- Podemos agrupar subexpresións nas expresións de EMMET usando parénteses: table>(tr>th*2) -->
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+    <!-- Crear elementos "irmáns": span+div -->
+    <span></span>
+    <div></div>
+    <!-- Crear elementos no nivel anterior: span>div^p -->
+    <span>
+        <div></div>
+    </span>
+    <p></p>
+    <!-- Expresións complexas -->
+    <!-- table>thead+tbody -->
+    <!-- table>(thead>tr)+(tbody>tr*4) -->
+    <!-- table>(thead>tr>th*4)+(tbody>tr*4>td*4) -->
+
+</body>
+
+</html>
