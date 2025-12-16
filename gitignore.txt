@@ -31,4 +31,6 @@ replay_pid*
 
 # Ignorar archivos temporales y de bloqueo (LibreOffice/Word)
 .~lock.*
-~$*‎
+~$*
+
+.zip‎
