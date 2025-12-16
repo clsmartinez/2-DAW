@@ -1,3 +1,0 @@
-morado : #6b2542
-gris   : #999999
-blanco : #ffffff
