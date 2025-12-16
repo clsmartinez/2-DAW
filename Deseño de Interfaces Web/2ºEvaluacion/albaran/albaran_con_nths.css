@@ -1,0 +1,97 @@
+body {
+    width: 1000px;
+    margin: 30px auto;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+
+h1 {
+    text-align: end;
+    color: rgb(250, 91, 91);
+}
+
+h1::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: rgb(26, 26, 114);
+    color: white;
+}
+
+
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f3;
+}
+
+tr,
+thead,
+th,
+td {
+    border: grey 1px solid;
+    padding: 2px;
+}
+
+
+tfoot {
+    background-color: rgb(31, 31, 194);
+    color: white;
+    text-align:right;
+    font-weight: bold;
+
+}
+
+tbody tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+tr td:last-child {
+    text-align: end;
+    font-weight: bolder;
+}
+
+tr td:last-child::after {
+    content: "€";
+}
+
+
+tr td:nth-child(4) {
+    text-align: end;
+}
+
+tr td:nth-child(4)::after {
+    content: "€";
+}
+
+tr td:nth-child(5) {
+    text-align: center;
+}
+
+tr td:nth-child(5)::after {
+    content: "%";
+}
+
+
+tr td:nth-child(6) {
+    text-align: center;
+}

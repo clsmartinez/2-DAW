@@ -1,0 +1,100 @@
+/*@ rules*/
+
+/* variables */
+:root {
+    --bgcolor : #141a29;
+    --bgcolortrans : rgba(20,26,41,0.75);
+    --acolor : #f0f0f0;
+    --ahovercolor : #ffc375;
+}
+
+/*reset habitual*/
+* {    margin: 0;    padding: 0;    border: 0;    box-sizing: border-box; }
+
+/* los enlaces */
+a { color: var(--acolor); text-decoration: none; }
+a:hover { color: var(--ahovercolor); }
+
+/* las listas */
+li { list-style-type: none; }
+
+/* estilos específicos */
+
+body { width: 100%; background-image: url("./imgs/background-discos.jpg"); background-repeat: no-repeat; background-size: cover; background-position: top; background-attachment: fixed; }
+
+/* header */
+
+header {
+    width: 100%;
+    height: 80px;
+    padding: 20px 5%;
+    background-color: var(--bgcolor);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    position: fixed;
+    top: 0;
+}
+
+h1 {
+    font-size: 0;
+    background-image: url(./imgs/logo-robe.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav     { display: flex; justify-content: flex-end;}
+nav ul  { display: flex; gap: 20px; align-items: center; }
+nav ul li a { font-family: sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: -0.05rem; }
+
+
+/* main */
+#discografia { margin-top: 120px; }
+#discografia h2 { font: bold 2rem sans-serif; color: var(--acolor); text-align: center; text-transform: capitalize; }
+
+article#disco { width: 75%; margin: 20px auto; display: grid; grid-template-areas: "titulo letras" ; grid-template-columns: 1fr 3fr; column-gap: 30px; align-items:start; }
+article#disco h3 { grid-area: titulo; font: bold 1.5rem sans-serif; color: var(--acolor); }
+article#disco img { grid-area: titulo; margin-top: 50px; border-radius: 5%; }
+article#disco ul { padding: 10px; grid-area: letras; overflow-y: auto; background-color: var(--bgcolor); border-radius: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+article#disco ul li { width: calc(33% - 10px); }
+article#disco ul h4 { color: var(--ahovercolor); font: normal 1.1rem sans-serif; }
+article#disco ul p { color: var(--acolor); font: normal 0.9rem sans-serif; white-space: pre-line; }
+
+
+
+#resto_discos { margin-bottom: 100px; padding: 25px 0; background-color: var(--bgcolortrans); }
+#resto_discos p { display: flex; gap: 20px; align-items: center; justify-content: space-evenly; }
+#resto_discos p a { display: block; width: 15%; }
+#resto_discos p a img { display: block; width: 100%; border-radius: 10%; }
+#resto_discos p a img:hover { border: 2px solid var(--ahovercolor); }
+
+/* merchandising */
+aside#merchandising { width: 125px; position: fixed; top: 50%; right:0; transform:translateY(-50%); display:flex; flex-direction: column; background-color: var(--bgcolortrans); border-radius: 15px; }
+.producto { margin: 10px auto; }
+.producto img { width: 80%; display: block; clear: both; margin: 0 auto;}
+.producto p { text-align:center; }
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 80px;
+    padding: 20px 5%;
+    background-color: var(--bgcolor);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    position: fixed;
+    bottom: 0;
+}
+footer * { color: var(--acolor); }
+
+ul#redes { display: flex; gap: 20px; align-items: center; }
+.icono-social { display: block; width: 48px; height: 48px; font-size: 0; background-position: center; background-size: contain; background-repeat: no-repeat; }
+.icono-facebook { background-image: url(./imgs/social_facebook.png); }
+.icono-x { background-image: url(./imgs/social_x.png); }
+.icono-instagram { background-image: url(./imgs/social_instagram.png); }
+.icono-youtube { background-image: url(./imgs/social_youtube.png); }
+.icono-apple { background-image: url(./imgs/social_apple.png); }
+.icono-spotify { background-image: url(./imgs/social_spotify.png); }

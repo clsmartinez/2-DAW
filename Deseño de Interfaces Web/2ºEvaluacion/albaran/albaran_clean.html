@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Productos de Mecánica</title>
+    <style>
+        html {
+            background-color: rgb(233, 229, 229);
+        }
+
+        body {
+            background-color: white;
+            width: 1000px;
+            margin: 30px auto;
+            border: 1px solid brown;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: sans-serif;
+
+        }
+
+
+        h1 {
+            text-align: end;
+            color: rgb(250, 91, 91);
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            border-top: 1px solid #ccc;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        thead {
+            background-color: rgb(26, 26, 114);
+            color: white;
+        }
+
+
+
+        tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f3;
+        }
+
+        tr,
+        thead,
+        th,
+        td {
+            border: grey 1px solid;
+            padding: 2px;
+        }
+
+
+        tfoot {
+            background-color: rgb(31, 31, 194);
+            color: white;
+            text-align: right;
+            font-weight: bold;
+
+        }
+
+        tbody tr td:first-child {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tr td:last-child {
+            text-align: end;
+            font-weight: bolder;
+            font-family: monospace;
+        }
+
+        tr td:last-child::after {
+            content: "€";
+            font-family: monospace;
+        }
+
+
+        tr td:nth-child(4) {
+            text-align: end;
+            font-family: monospace;
+        }
+
+        tr td:nth-child(4)::after {
+            content: "€";
+            font-family: monospace;
+        }
+
+        tr td:nth-child(5) {
+            text-align: center;
+        }
+
+        tr td:nth-child(5)::after {
+            content: "%";
+        }
+
+
+        tr td:nth-child(6) {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>albarán para cliente</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th><abbr title="Impuesto sobre el Valor Añadido">I.V.A.</abbr></th>
+                <th>Unidades</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P001</td>
+                <td>Bujía</td>
+                <td>Bujía de encendido de iridio para motores gasolina.</td>
+                <td>12.50</td>
+                <td>21</td>
+                <td>4</td>
+                <td>50.00</td>
+            </tr>
+            <tr>
+                <td>P002</td>
+                <td>Filtro Aceite</td>
+                <td>Filtro de aceite sintético para vehículos diésel.</td>
+                <td>8.99</td>
+                <td>21</td>
+                <td>2</td>
+                <td>17.98</td>
+            </tr>
+            <tr>
+                <td>P003</td>
+                <td>Pastillas Freno</td>
+                <td>Juego de pastillas de freno delanteras cerámicas.</td>
+                <td>45.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>P004</td>
+                <td>Disco Freno</td>
+                <td>Disco de freno ventilado para eje delantero.</td>
+                <td>75.50</td>
+                <td>21</td>
+                <td>2</td>
+                <td>151.00</td>
+            </tr>
+            <tr>
+                <td>P005</td>
+                <td>Aceite Sintético</td>
+                <td>Aceite de motor 5W-30 Full Sintético 5 Litros.</td>
+                <td>39.90</td>
+                <td>21</td>
+                <td>1</td>
+                <td>39.90</td>
+            </tr>
+            <tr>
+                <td>P006</td>
+                <td>Correa Distrib.</td>
+                <td>Kit de correa de distribución con tensores.</td>
+                <td>85.20</td>
+                <td>21</td>
+                <td>1</td>
+                <td>85.20</td>
+            </tr>
+            <tr>
+                <td>P007</td>
+                <td>Batería 12V</td>
+                <td>Batería de automóvil 12V 70Ah AGM.</td>
+                <td>110.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>110.00</td>
+            </tr>
+            <tr>
+                <td>P008</td>
+                <td>Amortiguador</td>
+                <td>Amortiguador trasero de gas para suspensión.</td>
+                <td>62.00</td>
+                <td>21</td>
+                <td>2</td>
+                <td>124.00</td>
+            </tr>
+            <tr>
+                <td>P009</td>
+                <td>Filtro Aire</td>
+                <td>Filtro de aire de alto flujo para motor.</td>
+                <td>15.75</td>
+                <td>21</td>
+                <td>3</td>
+                <td>47.25</td>
+            </tr>
+            <tr>
+                <td>P010</td>
+                <td>Líquido Frenos</td>
+                <td>Líquido de frenos DOT 4 1 Litro.</td>
+                <td>9.50</td>
+                <td>21</td>
+                <td>2</td>
+                <td>19.00</td>
+            </tr>
+            <tr>
+                <td>P011</td>
+                <td>Bomba Agua</td>
+                <td>Bomba de agua de repuesto para sistema de refrigeración.</td>
+                <td>55.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>55.00</td>
+            </tr>
+            <tr>
+                <td>P012</td>
+                <td>Termostato</td>
+                <td>Termostato del motor con carcasa.</td>
+                <td>18.25</td>
+                <td>21</td>
+                <td>1</td>
+                <td>18.25</td>
+            </tr>
+            <tr>
+                <td>P013</td>
+                <td>Tensor Correa</td>
+                <td>Tensor de correa de accesorios automático.</td>
+                <td>32.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>32.00</td>
+            </tr>
+            <tr>
+                <td>P014</td>
+                <td>Cable Bujía</td>
+                <td>Juego de cables de bujías de silicona.</td>
+                <td>28.90</td>
+                <td>21</td>
+                <td>1</td>
+                <td>28.90</td>
+            </tr>
+            <tr>
+                <td>P015</td>
+                <td>Rotula Susp.</td>
+                <td>Rótula de suspensión inferior delantera.</td>
+                <td>22.50</td>
+                <td>21</td>
+                <td>2</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>P016</td>
+                <td>Cojinete Rueda</td>
+                <td>Cojinete de rueda delantero con ABS.</td>
+                <td>37.00</td>
+                <td>21</td>
+                <td>2</td>
+                <td>74.00</td>
+            </tr>
+            <tr>
+                <td>P017</td>
+                <td>Sensor OX</td>
+                <td>Sensor de oxígeno (lambda) de 4 hilos.</td>
+                <td>48.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>48.00</td>
+            </tr>
+            <tr>
+                <td>P018</td>
+                <td>Manguera Radiador</td>
+                <td>Manguera superior del radiador.</td>
+                <td>14.99</td>
+                <td>21</td>
+                <td>1</td>
+                <td>14.99</td>
+            </tr>
+            <tr>
+                <td>P019</td>
+                <td>Junta Tapa Vál.</td>
+                <td>Junta de tapa de válvulas de goma.</td>
+                <td>11.50</td>
+                <td>21</td>
+                <td>1</td>
+                <td>11.50</td>
+            </tr>
+            <tr>
+                <td>P020</td>
+                <td>Tensor Cadena</td>
+                <td>Tensor hidráulico de cadena de distribución.</td>
+                <td>68.00</td>
+                <td>21</td>
+                <td>1</td>
+                <td>68.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Total General</td>
+                <td>1183.02</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Estilos-->
+    <link rel="stylesheet" type="text/css" href="exemplo03c.css">
+</head>
+
+<body>
+    <h1>Formulario de rexistro de usuario</h1>
+    <form action="" method="post">
+        <!--Nome completo-->
+        <label for="nome">Nome completo:</label>
+        <input type="text" name="nome" id="nome" placeholder="Ex: Ana López">
+
+        <!--Email-->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Ex: ana@gmail.com">
+
+        <!--Contrasinal-->
+        <label for="contrasinal">Contrasinal:</label>
+        <input type="password" name="contrasinal" id="contrasinal" title="Minimo 6 caracteres">
+
+        <!--Data de nacemento-->
+        <label for="datanac">Data de nacemento:</label>
+        <input type="date" name="datanac" id="datanac">
+
+        <!--Xénero-->
+        <p>Xénero</p>
+        <input type="radio" name="xenero" id="femenino">
+        <label for="femenino">Femenino</label>
+        <input type="radio" name="xenero" id="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="xenero" id="outros">
+        <label for="outros">Outros</label>
+
+        <!--Preferencias:-->
+        <p>Preferencias:</p>
+        <input type="checkbox" name="preferencia" id="novas">
+        <label for="novas">Recibir novas por correo</label>
+        <input type="checkbox" name="preferencia" id="ofertas">
+        <label for="ofertas">Recibir ofertas personalizadas</label>
+
+        <!--Pais-->
+        <label for="pais">País:</label>
+        <select name="pais" id="pais">
+            <option value="">Selecciona unha opción:</option>
+            <option value="es">España</option>
+            <option value="pt">Portugal</option>
+            <option value="br">Brasil</option>
+        </select>
+
+        <!--Botón de rexistro-->
+        <input type="submit" value="Rexistrarse">
+    </form>
+
+</body>
+
+</html>

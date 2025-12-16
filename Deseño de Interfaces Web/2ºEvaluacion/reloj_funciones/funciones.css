@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+:root {
+    --clock-size: 600px;
+    --ball-size: 100px;
+    --horas: 17;
+    --minutos: 40;
+    --segundos: 15;
+}
+
+#reloj {
+    width: var(--clock-size);
+    height: var(--clock-size);
+    margin: 100px auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+.bolita:nth-child(1) {
+    --angle: 60deg;
+}
+
+.bolita:nth-child(2) {
+    --angle: 30deg;
+}
+
+.bolita:nth-child(3) {
+    --angle: 0deg;
+}
+
+.bolita:nth-child(4) {
+    --angle: 330deg;
+}
+
+.bolita:nth-child(5) {
+    --angle: 300deg;
+}
+
+.bolita:nth-child(6) {
+    --angle: 270deg;
+}
+
+.bolita:nth-child(7) {
+    --angle: 240deg;
+}
+
+.bolita:nth-child(8) {
+    --angle: 210deg;
+}
+
+.bolita:nth-child(9) {
+    --angle: 180deg;
+}
+
+.bolita:nth-child(10) {
+    --angle: 150deg;
+}
+
+.bolita:nth-child(11) {
+    --angle: 120deg;
+}
+
+.bolita:nth-child(12) {
+    --angle: 90deg;
+}
+
+
+
+.bolita {
+    position: absolute;
+    width: var(--ball-size);
+    height: var(--ball-size);
+    clip-path: circle();
+    background-image: radial-gradient(white, black);
+    margin-top: calc(var(--ball-size)*-0.5);
+    margin-left: calc(var(--ball-size)*-0.5);
+    left: calc(50% + var(--clock-size)*0.5*cos(var(--angle)));
+    top: calc(50% - var(--clock-size)*0.5*sin(var(--angle)));
+    font-size: 4rem;
+    text-align: center;
+    line-height: var(--ball-size);
+    transform: rotate(calc(90deg - var(--angle)));
+}
+
+.aguja {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    border-radius: 5px;
+    transform: translate(-50%, -100%) rotate(var(--rotacion));
+}
+
+.hora {
+    height: calc(var(--clock-size) * 0.25);
+    width: 10px;
+    background-color: black;
+    --rotacion: calc(var(--horas) * 30deg);
+    z-index: 2;
+}
+
+.minuto {
+    height: calc(var(--clock-size) * 0.35);
+    width: 6px;
+    background-color: #333;
+    --rotacion: calc(var(--minutos) * 6deg);
+    z-index: 3;
+}
+
+.segundo {
+    height: calc(var(--clock-size) * 0.40);
+    width: 2px;
+    background-color: red;
+    --rotacion: calc(var(--segundos) * 6deg);
+    z-index: 4;
+}

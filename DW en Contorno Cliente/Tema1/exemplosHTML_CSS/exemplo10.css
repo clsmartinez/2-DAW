@@ -1,0 +1,77 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da páxina */
+
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color:rgb(252, 238, 221);
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "noticias galeria"
+    "noticias galeria"
+    "pe pe";
+    margin: 15px;
+}
+
+aside{
+    background-color:beige;
+    margin-right:25px;
+    text-align: center;
+}
+
+/*Contedor Grid*/
+
+main{
+     grid-area: galeria;
+     background-color: beige;
+}
+
+.contedor{
+    display: flex;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+/*Tarxetas da galería*/
+
+.tarxeta{
+    background-color: white;
+    padding: 1rem;
+    border:1px solid #ccc;
+    text-align: center;
+    margin: 15px;
+        width: 50%;
+}
+
+aside{
+    grid-area: noticias;
+}
+
+footer{
+    grid-area: pe;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+header{
+    grid-area: titulo;
+    text-align: center;
+}
+
+img{
+    width: 100px;
+}

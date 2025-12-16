@@ -1,0 +1,76 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da páxina */
+
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color:rgb(252, 238, 221);
+    line-height: 1.6;
+}
+
+/*Cabeceira e pé de páxina*/
+
+header,footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*Bloque principal*/
+
+main{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 auto;
+}
+
+/*Contedor Flex (section)*/
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:1.5rem;
+}
+
+/*Tarxetas (article)*/
+
+article{
+    background-color: bisque;
+    border-radius: 8px;
+    box-shadow: 0 0 8px;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: center;
+    flex: 1 1 280px; /*Tasa de crecimiento 1, Tasa de decrecemento 1, tamaño de base 280px*/
+    transition: transform 0.2s ease-in-out; 
+}
+
+/*Ao pasar o rato por encima*/
+article:hover{
+    transform: scale(1.03); /*Aumentar o 3% o tamaño*/
+}
+
+article img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+article h2{
+    margin-bottom: 0.5rem;
+    color: rgb(56, 0, 56);
+}
+
+article p{
+    font-size: 0.95rem;
+}
