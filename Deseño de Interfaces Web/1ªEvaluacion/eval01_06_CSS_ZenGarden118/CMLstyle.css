@@ -1,0 +1,228 @@
+/*Por:Carlos Martínez López*/
+
+/*Nota:la tipografía usada por el autor
+ es una predifnida del navegador asi que no hizo falta importarla */
+
+/*Colores y tamaños predefinidos*/
+:root {
+
+    --full-width: 1200px;
+    --wrapper-width: 1200px;
+    --tamano-fuente: 20px;
+    --tamano-titulo:50px;
+}
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*Empezamos etiquetas*/
+body {
+    width: var(--full-width);
+    margin: 0 auto;
+    padding: 0;
+    background-color: #edf6e3;
+    background-image: url(images/fondoBody.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 1400px;
+    font-family: Cochin, Georgia, "New Century Schoolbook", "Bitstream Vera Serif", "Times New Roman", times, serif;
+}
+
+h1,
+h2 {
+    color: white;
+    text-align: left;
+    position: relative;
+    top: 300px;
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: var(--tamano-fuente);
+}
+
+h1 {
+    font-size: var(--tamano-titulo);
+    text-transform: uppercase;
+}
+
+a {
+    color: rgb(112, 176, 48);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: var(--tamano-fuente);
+}
+
+p {
+    margin: 14px;
+    text-align: justify;
+    font-size: var(--tamano-fuente);
+}
+
+
+[role="banner"] {
+    background-image: url(images/fondoBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: var(--full-width);
+    height: 400px;
+    background-position: top;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+[role="article"]:not(.summary) {
+    margin-top: 15px;
+    border: 3px solid gainsboro;
+}
+
+[role="article"]:not(.summary)::after {
+    content: url(images/hoja.gif);
+    display: flex;
+    justify-content: center;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+    border: 3px solid gainsboro;
+    width: 350px;
+}
+
+#zen-summary {
+    background-image: url(images/fondoVerde.gif);
+    background-size: var(--full-width);
+
+}
+
+#zen-summary p {
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+#zen-summary>p:first-child {
+    font-weight: bold;
+}
+
+
+h3 {
+    font-size: var(--tamano-fuente);
+    background-image: url(images/fondoh3.gif);
+    color: rgb(41, 77, 0);
+    border: 3px solid gainsboro;
+    text-transform: uppercase;
+    background-position: bottom;
+    font-weight: bold;
+}
+
+div:not(#zen-summary):not(.page-wrapper) {
+    color: rgb(69, 69, 69);
+    /*Escogida con color picker*/
+}
+
+footer {
+    background-image: url(images/fondoh3.gif);
+    color: rgb(41, 77, 0);
+    background-position: center;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 15px;
+    margin-top: 20px;
+    height: 50px;
+}
+
+footer a {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.select,
+.archives,
+.resources {
+    color: rgb(128, 201, 54);
+    background-image: url(images/fondoVerde.gif);
+    padding-left: 5px;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.design-name {
+    font-weight: bold;
+    color: rgb(128, 201, 54);
+}
+
+[role="navigation"],
+.designer-name {
+    color: #6c9e2d;
+    font-style: italic;
+}
+
+.design-archives li {
+    font-style: normal;
+
+}
+
+[role="navigation"] li,
+.zen-resources li {
+    border-bottom: dotted;
+    padding: 5px;
+    color: #6c9e2d;
+}
+
+[role="navigation"]::after,
+[role="archives"]::after,
+.zen-resources ul::after {
+    content: url(images/hoja.gif);
+    display: flex;
+    justify-content: center;
+}
+
+/*Colocación con grid*/
+
+.page-wrapper {
+    display: grid;
+    grid-template-areas: "header header"
+        "summary aside"
+        "preamble aside"
+        "supporting aside";
+    column-gap: 20px;
+    padding: 20px;
+}
+
+.intro {
+    display: contents;
+}
+
+.intro header {
+    grid-area: header;
+}
+
+#zen-summary {
+    grid-area: summary;
+}
+
+#zen-preamble {
+    grid-area: preamble;
+}
+
+#zen-supporting {
+    grid-area: supporting;
+}
+
+
+.sidebar {
+    grid-area: aside;
+}

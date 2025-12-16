@@ -8,6 +8,7 @@ let campoComentarios = document.getElementById("comentarios");
 
 let formulario = document.getElementById("formulario-contactos");
 let listaxe = document.getElementById("listaxe-contactos");
+let formularioSeccion=document.getElementById("formulario-seccion");
 
 let campoProvincia = document.getElementById("provincia");
 let campoCodigoPostal = document.getElementById("codPostal");
@@ -80,7 +81,7 @@ let provincias = [
 for (let provincia of provincias) {
     let opcion = document.createElement("option");
     if (provincia.codigo !== '') {
-        opcion.innerText = provincia.provincia;
+        opcion.textContent = provincia.provincia;
     } else {
         opcion.setAttribute("default", "default");
     }
@@ -99,6 +100,9 @@ campoCodigoPostal.addEventListener("input", function() {
 
 
 function engadirContacto() {
+    let nomeBuscado=contactos.find((contacto)=> campoNome.value=== contacto.nome.toLowerCase());
+    if(nomeBuscado==undefined){
+
     let contacto = { //Creamos contacto e o inicializamos aos campos do HTML
         nome: campoNome,
         apelidos: campoApelidos,
@@ -121,7 +125,7 @@ function engadirContacto() {
     });
 
 
-    listaxe.innerHTML = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
+    listaxe.textContent = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
     for (contacto of contactos) {
         let filaContacto = document.createElement("p");//Creamos nova linea para cada contacto
         filaContacto.textContent = contacto.nome + " " + contacto.apelidos + ", Tlf.: " +
@@ -129,6 +133,13 @@ function engadirContacto() {
         listaxe.appendChild(filaContacto);//Engadimos a linea ao HTML
     }
     formulario.reset(); //Reiniciamos o formulario
+}else{
+    let aviso=document.createElement("p");
+    aviso.textContent="O nome xa foi inserido, non se pode engadir";
+    formularioSeccion.appendChild(aviso);
+
+
+}
 }
 
 function buscarContacto() {
@@ -148,7 +159,7 @@ function eliminarContacto() {
 
     contactos.splice(contactoEliminar, 1); //Borramos o contacto do array coa función splice (contacto que se borra, num de contactos a borrar)
 
-    listaxe.innerHTML = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
+    listaxe.textContent = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
     for (contacto of contactos) {
         let filaContacto = document.createElement("p");//Creamos nova linea para cada contacto
         filaContacto.textContent = contacto.nome + " " + contacto.apelidos + ", Tlf.: " +
@@ -171,7 +182,7 @@ function modificarContacto() {
     contactoModificar.enderezo = campoEnderezo.value;
     contactoModificar.comentarios = campoComentarios.value;
 
-    listaxe.innerHTML = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
+    listaxe.textContent = ""; //Borramos os datos escritos para poder sobrescribilos e non se repitan
     for (contacto of contactos) {
         let filaContacto = document.createElement("p");//Creamos nova linea para cada contacto
         filaContacto.textContent = contacto.nome + " " + contacto.apelidos + ", Tlf.: " +

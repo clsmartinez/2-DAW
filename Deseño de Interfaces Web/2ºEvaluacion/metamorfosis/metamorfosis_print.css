@@ -1,0 +1,163 @@
+@page {
+    size: A4 portait;
+    margin: 2.5cm 3cm 2cm 3cm;
+
+    @bottom-center {
+        content: ":: " counter(page) " ::";
+    }
+}
+
+@page :left {
+    @top-right {
+        content: "Franz Kafka";
+    }
+
+    @top-left {
+        content: "La metamorfosis";
+    }
+}
+
+@page :right {
+    @top-left {
+        content: "Franz Kafka";
+    }
+
+    @top-right {
+        content: "La metamorfosis";
+    }
+}
+
+@page :first {
+    @bottom-center {
+        content: "";
+    }
+
+    @top-left {
+        content: "";
+    }
+
+    @top-right {
+        content: "";
+    }
+}
+
+#pg-header-heading {
+    text-align: right;
+    color: #a91511;
+    border-bottom: 1px solid black;
+    margin-top: 150px;
+    margin-bottom: 75px;
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#pg-header div {
+    font-family: monospace;
+}
+
+
+
+#pg-start-separator {
+    break-after: page;
+    font-size: 10pt;
+}
+
+hr {
+    break-after: page;
+    display: none;
+}
+
+h1 {
+    margin-top: 300px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.no-break,
+h3 {
+    text-align: right;
+
+}
+
+.chapter h2 {
+    text-align: center;
+    break-before: page;
+}
+
+.chapter p,
+.chapter div {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.chapter p::first-letter {
+    font-weight: bold;
+    margin-right: 0.1em;
+    line-height: 1;
+}
+
+#pg-footer {
+    font-family: monospace;
+}
+
+#pg-end-separator {
+    text-align: center;
+    font-weight: bolder;
+    break-before: page;
+    margin-bottom: 20px;
+    font-size: 11pt;
+}
+
+#pg-end-separator+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#project-gutenberg-license {
+    margin-top: 15px;
+}
+
+#pg-footer-heading {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.agate {
+    font-style: italic;
+    color: rgb(153, 17, 17);
+    font-size: larger;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pg-footer {
+    text-align: justify;
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+.secthead {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.secthead:not(.secthead ~ .secthead) { /*Para que no lo haga si no es la primera aparición de la clase (es decir, que solo se lo haga a la primera de la clase)*/
+    break-before: page;
+}
+
+#pg-footer div{
+    margin-top: 20px;
+}
+
+section ul{
+    list-style: none;
+}

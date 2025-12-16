@@ -12,4 +12,4 @@ let correo= nomeUsuario+dominio;
 let regexCorreo=/^[a-z][a-z0-9._-]{2,}[a-z0-9][@][a-z][a-z0-9-._-]{2,}[a-z0-9][.][a-z]{2,5}$/;
 
 let fecha="24/11/2005";
-let regexData=/^([0-3][1-9])$/;
+let regexData=/^(0[1-9][1-9])|([1-2][0-9])|(3[0-1])$/;/*Sin acabar*/
