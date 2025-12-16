@@ -1,0 +1,33 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da páxina */
+
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color:rgb(252, 238, 221);
+    line-height: 1.6;
+}
+
+/*Contedor Grid*/
+
+.contedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*4 columnas de igual tamaño*/
+    gap: 1rem;
+}
+
+/*Tarxetas da galería*/
+
+.tarxeta{
+    background-color: white;
+    padding: 1rem;
+    border:1px solid #ccc;
+    text-align: center;
+}

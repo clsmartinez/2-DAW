@@ -1,0 +1,122 @@
+/*tipografía para textos no titulos: p,li...*/
+@font-face {
+    font-family: 'Norse';
+    src: url(font/Norsebold.otf);
+}
+
+/*tipografía para textos titulos: h1...*/
+@font-face {
+    font-family: romanica;
+    src: url(font/Romanica.ttf);
+}
+
+@keyframes animacionH1 {
+    from {
+        width: 900px;
+        font-size: smaller;
+        opacity: 25%;
+    }
+
+    to {
+        width: 900px;
+        font-size: 120px;
+        opacity: 55%;
+    }
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes arderLentamente {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    50% {
+        opacity: 50%;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    width: 1000px;
+    margin: 150px auto;
+    background-color: #EAE7DD;
+}
+
+h1,
+h2 {
+    font-family: romanica;
+}
+
+p {
+    font-family: 'Norse';
+    font-size: clamp(16px, 1vw, 40px);
+    margin: 10px;
+}
+
+p::first-letter {
+    margin-top: 10px;
+    margin-right: 3px;
+    color: red;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h1 {
+    position: fixed;
+    rotate: -45deg;
+    left: 500px;
+    animation-name: animacionH1;
+    animation-duration: 5s;
+    width: 900px;
+    font-size: 120px;
+    opacity: 55%;
+    color: #99775C;
+    text-decoration: underline;
+}
+
+h2 {
+    color: white;
+    text-shadow: 0 0 10px #99775C;
+    animation: deslizar 1s ease-out forwards;
+}
+
+#hogera1,
+#hogera2 {
+    background-image: url(img/2spnJPK.gif);
+    width: 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: fixed;
+    animation: arderLentamente 3s ease-in-out forwards;
+    animation-delay: 2s;
+    animation-fill-mode: backwards
+}
+
+#hogera1 {
+    left: 0;
+    bottom: 0;
+}
+
+#hogera2 {
+    right: 0;
+    bottom: 0;
+}
+

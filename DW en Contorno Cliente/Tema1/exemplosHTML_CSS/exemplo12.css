@@ -1,0 +1,115 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da páxina */
+
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color:rgb(252, 238, 221);
+    line-height: 1.6;
+}
+
+/*Cabeceira e pé de páxina*/
+
+header,footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*Selector xeral de elementos de clase "main*/
+main{
+    padding: 2rem;
+}
+
+
+
+/*Selector de clase "novas*/
+.novas{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+/*Selector descendente de .novas*/
+.novas article{
+    background-attachment: #ffff;
+    border-left: 6px solid rgb(150, 150,211);
+    padding: 1rem;
+    border-radius: 6px;
+    position: relative;
+}
+
+/*Pseudo-elemento ::before, engadimos un texto de antes 
+de cada elemento de tipo "article"*/
+
+article::before{
+    content: "*";
+    position: absolute;
+    left: -2.5rem;
+    top:1rem;
+    font-size: 1.5rem;
+}
+
+/*Pseudo-elemento :first-child, engadimos estilo so ao primeiro articulo de
+tipo "article" dentro de un contedor de clase*/
+
+.novas article:first-child{
+    border-left-color:orange ;
+    background-color: bisque;
+}
+
+/*Pseudo-elemento :last-child, engadimos estilo so ao ultimo articulo de
+tipo "article" dentro de un contedor de clase*/
+
+.novas article:last-child{
+    border-left-color:rgb(90, 73, 43) ;
+    background-color: bisque;
+}
+
+/*Pseudo-elemento :nth-child(2), engadimos estilo so ao segundo articulo de
+tipo "article" dentro de un contedor de clase*/
+
+.novas article:nth-child(2){
+    border-left-color:rgb(168, 148, 115) ;
+    background-color: bisque;
+}
+
+/*Menu a partir de una lista*/
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu a{
+    background-color: rgb(30, 30, 80);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/*Coas pseudoclases: :hover e :focus (ao estar seleccionado) lle damos
+estilos ao menu*/
+
+.menu a:hover,
+.menu a :focus{
+    background-color: bisque;
+    color: black;
+}
+
+/*Coa pseudoclase :active modificamos o aspecto dos botons
+cando se premen*/
+
+.menu a:active{
+    background-color: rgb(106, 91, 70);
+}

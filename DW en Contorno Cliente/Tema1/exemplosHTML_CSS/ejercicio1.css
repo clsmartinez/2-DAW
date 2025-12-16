@@ -1,0 +1,33 @@
+/*Reset CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da páxina */
+
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color:rgb(252, 238, 221);
+    line-height: 1.6;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:1.5rem;
+}
+
+footer,header{
+    background-color: brown;
+    text-align: center;
+}
