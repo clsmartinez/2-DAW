@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Calculadora","l":"Calculadora()","u":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Calculadora","l":"sumar(int, int)","u":"sumar(int,int)"}];updateSearchResults();
